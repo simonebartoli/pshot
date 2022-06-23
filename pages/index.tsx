@@ -1,13 +1,11 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Homepage from "../components/index/homepage";
 
 const Home: NextPage = () => {
   return (
-    <div>
-
-    </div>
+      <main id={"main"} className="flex flex-col items-center w-full text-4xl">
+          <Homepage/>
+      </main>
   )
 }
 

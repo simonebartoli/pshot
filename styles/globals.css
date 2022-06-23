@@ -2,13 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+root{
+  --maxHeight: 0
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
+@media (min-width: 1750px) {
+  html, body{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  html, body{
+    font-size: 22px;
+  }
+}
+@media (min-width: 2500px) {
+  html, body{
+    font-size: 28px;
+  }
+}
+@media (min-width: 3000px) {
+  html, body{
+    font-size: 30px;
+  }
+}
+@media (min-width: 3500px) {
+  html, body{
+    font-size: 34px;
+  }
+}
+@media (min-width: 4000px) {
+  html, body{
+    font-size: 40px;
+  }
+}
+@media (min-width: 4500px) {
+  html, body{
+    font-size: 46px;
+  }
+}
+@media (min-width: 5000px) {
+  html, body{
+    font-size: 50px;
+  }
+}
+@media (min-width: 5500px) {
+  html, body{
+    font-size: 54px;
+  }
+}
+
 
 a {
   color: inherit;
@@ -17,4 +69,141 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -25%;
+  left: 0;
+  background-color: rgb(162, 123, 46);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.stroke-text{
+  text-shadow:
+          -1px -1px 0 silver,
+          1px -1px 0 silver,
+          -1px 1px 0 silver,
+          1px 1px 0 silver;
+}
+.home-container{
+  background: rgb(225,229,232);
+  background: linear-gradient(59deg, rgba(225,229,232,1) 0%, rgba(235,236,240,1) 100%);
+}
+
+.homepage-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.homepage-image:after {
+  position: absolute;
+  content:"";
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+
+}
+
+.navigationBar{
+  position: absolute;
+  width: 100%;
+  bottom: 0 !important;
+  left: 0;
+}
+
+
+@keyframes marginDown {
+  0% {
+    margin-top: -25%;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0
+  }
+}
+@keyframes marginUp {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotateOpposite {
+  0%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes slideInDown {
+  0%{
+    max-height: 0;
+  }
+  100%{
+    max-height: var(--maxHeight);
+  }
+}
+@keyframes slideOutUp {
+  0%{
+    max-height: var(--maxHeight);
+  }
+  100%{
+    max-height: 0;
+  }
+}
+
+@keyframes textFocusIn {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes arrowMove {
+  0% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100%{
+    transform: translateX(-25%);
+  }
 }

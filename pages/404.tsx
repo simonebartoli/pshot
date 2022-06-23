@@ -16,7 +16,7 @@ const Custom404 = () => {
     return (
         <main ref={mainRef} id={"main"} className="transition-all p-8 text-center my-auto flex flex-col justify-center items-center gap-8">
             <Head>
-                <title>Page Not Found - Oshot UK</title>
+                <title>Page Not Found - Pshot UK</title>
                 <meta name="robots" content="noindex, follow"/>
             </Head>
             <h1 className="text-6xl text-red-700">404</h1>

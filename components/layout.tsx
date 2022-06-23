@@ -4,6 +4,7 @@ import Footer from "./footer/footer";
 import {NextPage} from "next";
 import {useLayoutContext} from "../contexts/layout-context";
 import {useResizer} from "../contexts/resizer-context";
+import Popup from "./popup";
 
 type Props = {
     children: React.ReactNode
@@ -26,6 +27,7 @@ const Layout: NextPage<Props> = ({children}) => {
             <Navbar/>
                 <div ref={mainRef}>
                     {children}
+                    <Popup/>
                 </div>
             <Footer/>
         </>

@@ -132,6 +132,24 @@ a {
   left: 0;
 }
 
+@keyframes bouncing {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-50%);
+  }
+  40% {
+    transform: translateY(0%);
+  }
+  60% {
+    transform: translateY(-50%);
+  }
+  80% {
+    transform: translateY(0%);
+  }
+}
+
 
 @keyframes marginDown {
   0% {

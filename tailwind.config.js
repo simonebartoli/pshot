@@ -20,7 +20,8 @@ module.exports = {
         slideInDown: "slideInDown 0.25s ease-in-out",
         slideOutUp: "slideOutUp 0.25s ease-in-out forwards",
         textFocusIn: "textFocusIn 0.15s cubic-bezier(0.550, 0.085, 0.680, 0.530) both",
-        arrowMove: "arrowMove 0.5s ease-in-out infinite"
+        arrowMove: "arrowMove 0.5s ease-in-out infinite",
+        bouncing: "bouncing 1.5s ease-in-out infinite"
       },
       screens: {
         "mdx": "850px",
